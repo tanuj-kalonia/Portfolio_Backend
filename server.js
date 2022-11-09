@@ -15,6 +15,10 @@ cloudinary.v2.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 })
 
+app.use(cors({
+    origin: "*"
+}))
+
 app.listen(process.env.PORT, () => {
     console.log(`Server is up on port ${process.env.PORT}`);
 })
